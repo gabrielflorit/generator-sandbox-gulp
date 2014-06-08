@@ -1,7 +1,8 @@
 {
-  "name": "generator-sandbox",
+  "name": "generator-sandbox-gulp",
   "version": "0.0.0",
   "description": "Yeoman generator",
+  "author": "Gabriel Florit (http://gabrielflorit.github.io/)",
   "license": "MIT",
   "main": "app/index.js",
   "engines": {
