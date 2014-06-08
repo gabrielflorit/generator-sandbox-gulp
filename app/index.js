@@ -6,7 +6,7 @@ var yosay = require('yosay');
 var chalk = require('chalk');
 
 
-var SandboxGenerator = yeoman.generators.Base.extend({
+var SandboxGulpGenerator = yeoman.generators.Base.extend({
   init: function () {
     this.pkg = require('../package.json');
 
@@ -21,7 +21,7 @@ var SandboxGenerator = yeoman.generators.Base.extend({
     var done = this.async();
 
     // Have Yeoman greet the user.
-    this.log(yosay('Welcome to the marvelous Sandbox generator!'));
+    this.log(yosay('Welcome to the marvelous Sandbox Gulp generator!'));
 
     var prompts = [{
       name: 'projectName',
@@ -56,4 +56,4 @@ var SandboxGenerator = yeoman.generators.Base.extend({
   }
 });
 
-module.exports = SandboxGenerator;
+module.exports = SandboxGulpGenerator;
