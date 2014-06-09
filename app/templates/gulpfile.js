@@ -34,7 +34,7 @@ function startLivereload() {
 	});
 
 	// watch for changes and notify livereload
-	gulp.watch(['index.html', 'build/**/*.css'], function(e) {
+	gulp.watch(['index.html', 'js/**/*.js', 'build/**/*.css'], function(e) {
 		server.changed(e.path);
 	});
 }
