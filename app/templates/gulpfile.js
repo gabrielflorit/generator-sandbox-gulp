@@ -25,7 +25,7 @@ function startLivereload() {
 
 	// watch for changes to html and rebuild
 	gulp.watch([
-		'html/html.html',
+		'html/*.html',
 	], ['build-html']);
 
 	// watch for changes to scss and recompile
