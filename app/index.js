@@ -39,8 +39,8 @@ var SandboxGulpGenerator = yeoman.generators.Base.extend({
 
   app: function () {
     this.directory('html');
+    this.directory('css');
 
-    this.mkdir('css');
     this.mkdir('js');
     this.mkdir('libs');
 
