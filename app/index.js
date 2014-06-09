@@ -12,7 +12,11 @@ var SandboxGulpGenerator = yeoman.generators.Base.extend({
 
     this.on('end', function () {
       if (!this.options['skip-install']) {
-        this.installDependencies();
+        this.installDependencies({
+          callback: function () {
+            this.spawnCommand('sh', ['bitbucket.sh']);
+          }.bind(this) // bind the callback to the parent scope
+        });
       }
     });
   },
@@ -46,16 +50,19 @@ var SandboxGulpGenerator = yeoman.generators.Base.extend({
     this.mkdir('libs');
 
     this.template('_template.html', 'html/template.html');
-    this.template('_package.json', 'package.json');
-    this.template('_bower.json', 'bower.json');
-    this.template('_sandbox.sublime-project', this.projectName + '.sublime-project');
-    this.template('_LICENSE.md', 'LICENSE.md');
-
-    this.copy('gulpfile.js');
-    this.copy('.bowerrc');
   },
 
   projectfiles: function () {
+    this.template('_package.json', 'package.json');
+    this.template('_bower.json', 'bower.json');
+    this.template('_bitbucket.sh', 'bitbucket.sh');
+    this.template('_sandbox.sublime-project', this.projectName + '.sublime-project');
+    this.template('_LICENSE.md', 'LICENSE.md');
+    this.template('_README.md', 'README.md');
+
+    this.copy('gulpfile.js');
+    this.copy('.bowerrc');
+    this.copy('.gitignore');
   }
 });
 

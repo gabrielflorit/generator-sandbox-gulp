@@ -5,23 +5,19 @@
 			"follow_symlinks": true,
 			"path": ".",
 			"folder_exclude_patterns": [
-				// ".tmp",
-				// ".sass-cache",
+				".tmp",
+				".sass-cache",
 				"node_modules"
-				// "parts"
 			],
 			"file_exclude_patterns": [
 				".bowerrc",
-				// "bitbucket.sh",
+				"bitbucket.sh",
 				"bower.json",
-				// "config.rb",
-				// ".gitignore",
+				".gitignore",
 				"*.sublime-project",
 				"gulpfile.js",
 				"html/template.html",
-				// "LICENSE.md",
-				// ".jshintignore",
-				// ".jshintrc",
+				"LICENSE.md",
 				"package.json"
 			]
 		}
