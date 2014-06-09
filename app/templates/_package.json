@@ -1,6 +1,7 @@
 {
 	"name": "<%= _.slugify(projectName) %>",
 	"version": "0.0.0",
+	"author": "<%= _.slugify(user.git.username) %>",
 	"dependencies": {},
 	"devDependencies": {
 		"express": "^4.2.0",

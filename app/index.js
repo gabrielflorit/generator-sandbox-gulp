@@ -38,6 +38,7 @@ var SandboxGulpGenerator = yeoman.generators.Base.extend({
   },
 
   app: function () {
+
     this.directory('html');
     this.directory('css');
 
@@ -48,6 +49,8 @@ var SandboxGulpGenerator = yeoman.generators.Base.extend({
     this.template('_package.json', 'package.json');
     this.template('_bower.json', 'bower.json');
     this.template('_sandbox.sublime-project', this.projectName + '.sublime-project');
+    this.template('_LICENSE.md', 'LICENSE.md');
+
     this.copy('gulpfile.js');
     this.copy('.bowerrc');
   },
